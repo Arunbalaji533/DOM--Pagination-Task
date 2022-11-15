@@ -1,0 +1,12 @@
+.head{
+    text-align: center;
+}
+.box{
+    border-bottom: 2px solid blue;
+    margin: 20px 50px;
+    height: 450px;
+    width: 1150px;
+}
+.pagination{
+    justify-content: center ;
+}
