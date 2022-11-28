@@ -517,22 +517,18 @@ const btn8=document.querySelector(".btn8");
 const btn9=document.querySelector(".btn9");
 const btn10=document.querySelector(".btn10");
 
-//to set value for page
 let page=document.getElementsByClassName("changes")[0];
 
-//set starging item position with 0
 let currentItem=0;
 let curPage=0/10+1;
 
-//Try to load the data for first page when page load
 window.addEventListener("DOMContentLoaded",()=>{
 displayEmployees(currentItem);
 page.innerHTML=(currentItem/10+1);
 })
 
-//Logic for previous user when user click on button
+
 prevBtn.addEventListener("click",()=>{
-// decreament current postion to 10.
 if(0<currentItem){
   currentItem-=10;
   page.innerHTML=(currentItem/10+1);
@@ -542,9 +538,8 @@ if(0<currentItem){
 }
 })
 
-//Logic for next page when user click on next button
 nextBtn.addEventListener("click",()=>{
-//increase current position to 10.
+
 if(employees.length-10>currentItem){
   currentItem+=10;
   page.innerHTML=(currentItem/10+1);
@@ -554,7 +549,6 @@ if(employees.length-10>currentItem){
 }
 })
 
-//logic for first button
 firstBtn.addEventListener("click",()=>{
 if(currentItem>0){
 currentItem=0;
@@ -565,7 +559,6 @@ alert("You are alread in First page")
 }
 })
 
-//logic for last button
 lastBtn.addEventListener("click",()=>{
 if(currentItem<employees.length-10){
 currentItem=employees.length-10;
@@ -576,7 +569,6 @@ alert("You are already in last page")
 }
 })
 
-//button from 1 to 10 code are below:
 btn1.addEventListener("click",()=>{
 currentItem=0;
 page.innerHTML=currentItem/10+1;
@@ -628,7 +620,6 @@ page.innerHTML=currentItem/10+1;
 displayEmployees(currentItem);
 });
 
-//to add div element to class
 function displayEmployees(start){
 let addTo=document.querySelector(".table-responsive");
 
